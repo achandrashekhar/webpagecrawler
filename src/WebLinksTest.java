@@ -12,12 +12,26 @@ import java.io.IOException;
 public class WebLinksTest extends TestCase {
 
     @Test
-    public void testAssertMap(){
+    public void testAssertFile(){
 
         try {
             assertEquals("The files differ!",
                     FileUtils.readFileToString(new File("output.txt"),"utf-8"),
             FileUtils.readFileToString(new File("test.txt"), "utf-8"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    @Test
+    public void testAssertFile2(){
+
+        try {
+            assertEquals("The files differ!",
+                    FileUtils.readFileToString(new File("output2.txt"),"utf-8"),
+                    FileUtils.readFileToString(new File("test2.txt"), "utf-8"));
         } catch (IOException e) {
             e.printStackTrace();
         }

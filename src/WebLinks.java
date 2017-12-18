@@ -33,7 +33,7 @@ public class WebLinks {
 
    public void writeToFile(){
       try {
-         BufferedWriter bufferedWriter =  new BufferedWriter(new FileWriter("test.txt"));
+         BufferedWriter bufferedWriter =  new BufferedWriter(new FileWriter("output2.txt"));
          StringBuilder sb = new StringBuilder();
          for (String name: webLinks.keySet()){
             List<String> list = webLinks.get(name);
